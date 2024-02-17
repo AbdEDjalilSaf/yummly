@@ -7,8 +7,7 @@ function App() {
 
 return (
   <>
-    
-
+<div className=''>
 
 
 <LeftMenu />
@@ -50,7 +49,7 @@ return (
 
 
 
-
+</div>
 
     </>
   )
