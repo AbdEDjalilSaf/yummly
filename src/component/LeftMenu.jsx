@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import yummlyLogo from '../image/yummlyLogo.png'
 import whirle from '../image/whirle.webp'
-import './Component.css'
 
 function LeftMenu(){
 const [checked,setChecked] = useState(false);
