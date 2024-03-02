@@ -24,9 +24,10 @@ const handleButtonClick = (index) => {
 
 return (
 <>
-<div className="flex justify-center ">
+<div className="flex justify-center">
 <Swiper
         spaceBetween={30}
+        slidesPerView={2}
         hashNavigation={{
           watchState: true,
         }}
@@ -37,14 +38,26 @@ return (
         modules={[Pagination, Navigation, HashNavigation]}
         className=""
       >
-{buttons.map((button,index)=>(
- 
-        <SwiperSlide className={`border-none outline-none cursor-pointer bg-[#aaa] text-[#333] rounded-full w-[60px] h-[60px] mx-[10px]   ${index === activeIndex ? 'border-none outline-none cursor-pointer rounded-full w-[60px] h-[60px] mx-[10px] bg-[#007bff] text-[#fff] ' : ''}`} data-hash="slide1" key={index} onClick={() => handleButtonClick(index)}>{button}</SwiperSlide>
 
-))}
+{/* <Swiper
+        spaceBetween={30}
+        slidesPerView={2}
+        pagination={{ clickable: true }}
+        loop={true}
+        className=""
+      > */}
+    <div className="flex justify-center items-center ">
+{buttons.map((button, index) => (
+          <SwiperSlide key={index}>
+              <button className={`border-none outline-none cursor-pointer transition-[5000ms] bg-[#000] text-[#333] rounded-full w-[60px] h-[60px]   ${index === activeIndex ? 'border-none outline-none cursor-pointer rounded-full w-[60px] h-[60px] mx-[10px] bg-[#007bff] text-[#fff] ' : ''}`}>{button}</button>
+          </SwiperSlide>
+
+        ))}
+    </div>
+
 
 </Swiper>
-
+ 
 
 
 
