@@ -1,4 +1,5 @@
 import React from "react";
+import "./TypeCook.css"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState } from "react";
@@ -26,34 +27,20 @@ return (
 <>
 <div className="flex justify-center">
 <Swiper
-        spaceBetween={30}
-        slidesPerView={2}
-        hashNavigation={{
-          watchState: true,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation, HashNavigation]}
-        className=""
-      >
+      spaceBetween={1}
+      slidesPerView={3}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+      className="w-[300px] h-[800px]"
+    >
 
-{/* <Swiper
-        spaceBetween={30}
-        slidesPerView={2}
-        pagination={{ clickable: true }}
-        loop={true}
-        className=""
-      > */}
-    <div className="flex justify-center items-center ">
-{buttons.map((button, index) => (
+{buttons.map((souds, index) => (
           <SwiperSlide key={index}>
-              <button className={`border-none outline-none cursor-pointer transition-[5000ms] bg-[#000] text-[#333] rounded-full w-[60px] h-[60px]   ${index === activeIndex ? 'border-none outline-none cursor-pointer rounded-full w-[60px] h-[60px] mx-[10px] bg-[#007bff] text-[#fff] ' : ''}`}>{button}</button>
+<button className={`border-none outline-none cursor-pointer bg-[#000] text-[#333] rounded-full w-[60px] h-[60px] mx-[10px]  ${index === activeIndex ? 'border-none outline-none cursor-pointer rounded-full w-[60px] h-[60px]  bg-[#007bff] text-[#fff] mx-[10px] ' : ''}`} onClick={()=> handleButtonClick()}>{souds}</button>
           </SwiperSlide>
 
         ))}
-    </div>
+   
 
 
 </Swiper>

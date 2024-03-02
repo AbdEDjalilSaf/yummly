@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import LeftMenu from './component/LeftMenu'
+// import LeftMenu from './component/LeftMenu'
 import TypeCook from './component/simpleComponent/TypeCook'
 
 function App() {
@@ -11,7 +11,7 @@ return (
 <div className=''>
 <div className='flex gap-10'>
 
-<LeftMenu />
+{/* <LeftMenu /> */}
 
 <TypeCook />
 
