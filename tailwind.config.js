@@ -20,7 +20,8 @@ export default {
     },
     extend: {
       screens: {
-        'sl': '480px'
+        'sl': '480px',
+        'xs': '350px'
       }
     },
   },

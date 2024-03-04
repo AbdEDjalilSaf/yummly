@@ -8,8 +8,8 @@ function App() {
 
 return (
 <>
-<div className=''>
-<div className='flex gap-10'>
+<div className='flex gap-10 '>
+<div className='flex '>
 
 <LeftMenu />
 
