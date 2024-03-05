@@ -24,7 +24,7 @@ const refFocus = ()=>{
 }
 
 return (
-  <>
+<>
 <div className=" absolute  tribleImg  lg:ml-[240px] ">
 <div className=" flex justify-between ">
 <div className='w-32 '>
@@ -43,7 +43,41 @@ return (
 </div>
 </div>
 
+<div className=''>
+<div className='flex justify-center items-center mb-4 flex-col gap-1.5'>
+<p className='text-[#777] font-semibold '>Personalize Your Experience</p>
+<h2 className='text-xtralarge font-semibold text-[#555] '>What are your favorite cuisines?</h2>
+</div>
 
+
+
+<Swiper
+        spaceBetween={50}
+        slidesPerView={8}
+        navigation={false}
+        history={{
+          key: 'slide',
+        }}
+        modules={[Navigation, Pagination, History]}
+        className="mySwiper px-16 flex"
+      >
+        <SwiperSlide data-history="1"><button>Slide 1</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 2"><button>Slide 2</button></SwiperSlide>
+        <SwiperSlide data-history="3"><button>Slide 3</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 4"><button>Slide 4</button></SwiperSlide>
+        <SwiperSlide data-history="5"><button>Slide 5</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 6"><button>Slide 6</button></SwiperSlide>
+        <SwiperSlide data-history="7"><button>Slide 7</button></SwiperSlide>
+        <button><svg xmlns="http://www.w3.org/2000/svg" fill='#000000' viewBox="0 0 512 512" className=''><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg></button>
+        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg></button>
+</Swiper>
+
+
+
+
+
+
+</div>
 
    </div> 
 
