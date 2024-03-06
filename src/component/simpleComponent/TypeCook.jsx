@@ -59,17 +59,37 @@ return (
           key: 'slide',
         }}
         modules={[Navigation, Pagination, History]}
-        className="mySwiper px-16 flex"
+        className="mySwiper px-16 flex relative mb-3"
       >
-        <SwiperSlide data-history="1"><button>Slide 1</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 2"><button>Slide 2</button></SwiperSlide>
-        <SwiperSlide data-history="3"><button>Slide 3</button></SwiperSlide>
+        <SwiperSlide data-history="1" className=' w-[60px] h-[60px]  rounded-full'><button>Slide 1</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 2" className=' h-[170%] rounded-full'><button>Slide 2</button></SwiperSlide>
+        <SwiperSlide data-history="3" className=' h-[200%]  rounded-full'><button>Slide 3</button></SwiperSlide>
         <SwiperSlide data-history="Slide 4"><button>Slide 4</button></SwiperSlide>
         <SwiperSlide data-history="5"><button>Slide 5</button></SwiperSlide>
         <SwiperSlide data-history="Slide 6"><button>Slide 6</button></SwiperSlide>
         <SwiperSlide data-history="7"><button>Slide 7</button></SwiperSlide>
-        <button><svg xmlns="http://www.w3.org/2000/svg" fill='#000000' viewBox="0 0 512 512" className=''><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg></button>
-        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg></button>
+        <SwiperSlide data-history="1"><button>Slide 8</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 2"><button>Slide 9</button></SwiperSlide>
+        <SwiperSlide data-history="3"><button>Slide 10</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 4"><button>Slide 11</button></SwiperSlide>
+        <SwiperSlide data-history="5"><button>Slide 12</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 6"><button>Slide 13</button></SwiperSlide>
+        <SwiperSlide data-history="7"><button>Slide 14</button></SwiperSlide>
+        <SwiperSlide data-history="1"><button>Slide 15</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 2"><button>Slide 16</button></SwiperSlide>
+        <SwiperSlide data-history="3"><button>Slide 17</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 4"><button>Slide 18</button></SwiperSlide>
+        <SwiperSlide data-history="5"><button>Slide 19</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 6"><button>Slide 20</button></SwiperSlide>
+        <SwiperSlide data-history="7"><button>Slide 21</button></SwiperSlide>
+        <SwiperSlide data-history="1"><button>Slide 22</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 2"><button>Slide 23</button></SwiperSlide>
+        <SwiperSlide data-history="3"><button>Slide 24</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 4"><button>Slide 25</button></SwiperSlide>
+        <SwiperSlide data-history="5"><button>Slide 26</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 6"><button>Slide 27</button></SwiperSlide>
+        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='w-3 absolute left-0'><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></button>
+        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='w-3 absolute right-0'><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
 </Swiper>
 
 
