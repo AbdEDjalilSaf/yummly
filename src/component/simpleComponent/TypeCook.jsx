@@ -10,7 +10,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import './TypeCook.css';
-
 // import required modules
 import { Navigation, Pagination, History } from 'swiper/modules';
 
@@ -53,43 +52,43 @@ return (
 
 <Swiper
         spaceBetween={50}
-        slidesPerView={8}
+        slidesPerView={0}
         navigation={false}
         history={{
           key: 'slide',
         }}
         modules={[Navigation, Pagination, History]}
-        className="mySwiper px-16 flex relative mb-3"
+        className="mySwiper px-16 flex relative my-3"
       >
-        <SwiperSlide data-history="1" className=' w-[60px] h-[60px]  rounded-full'><button>Slide 1</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 2" className=' h-[170%] rounded-full'><button>Slide 2</button></SwiperSlide>
-        <SwiperSlide data-history="3" className=' h-[200%]  rounded-full'><button>Slide 3</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 4"><button>Slide 4</button></SwiperSlide>
-        <SwiperSlide data-history="5"><button>Slide 5</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 6"><button>Slide 6</button></SwiperSlide>
-        <SwiperSlide data-history="7"><button>Slide 7</button></SwiperSlide>
-        <SwiperSlide data-history="1"><button>Slide 8</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 2"><button>Slide 9</button></SwiperSlide>
-        <SwiperSlide data-history="3"><button>Slide 10</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 4"><button>Slide 11</button></SwiperSlide>
-        <SwiperSlide data-history="5"><button>Slide 12</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 6"><button>Slide 13</button></SwiperSlide>
-        <SwiperSlide data-history="7"><button>Slide 14</button></SwiperSlide>
-        <SwiperSlide data-history="1"><button>Slide 15</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 2"><button>Slide 16</button></SwiperSlide>
-        <SwiperSlide data-history="3"><button>Slide 17</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 4"><button>Slide 18</button></SwiperSlide>
-        <SwiperSlide data-history="5"><button>Slide 19</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 6"><button>Slide 20</button></SwiperSlide>
-        <SwiperSlide data-history="7"><button>Slide 21</button></SwiperSlide>
-        <SwiperSlide data-history="1"><button>Slide 22</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 2"><button>Slide 23</button></SwiperSlide>
-        <SwiperSlide data-history="3"><button>Slide 24</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 4"><button>Slide 25</button></SwiperSlide>
-        <SwiperSlide data-history="5"><button>Slide 26</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 6"><button>Slide 27</button></SwiperSlide>
-        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='w-3 absolute left-0'><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></button>
-        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='w-3 absolute right-0'><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
+        <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full american text-[#fff] font-semibold'><button>American</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Kid-Friendly text-[#fff] font-semibold'><button>Kid-Friendly</button></SwiperSlide>
+        <SwiperSlide data-history="3" className='w-[140px] h-[140px]  rounded-full Italian text-[#fff] font-semibold'><button>Italian</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full Asian text-[#fff] font-semibold'><button>Asian</button></SwiperSlide>
+        <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Mexican text-[#fff] font-semibold'><button>Mexican</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Southern text-[#fff] font-semibold'><button>Southern & Soul Food</button></SwiperSlide>
+        <SwiperSlide data-history="7" className=' w-[140px] h-[140px]  rounded-full French text-[#fff] font-semibold'><button>French</button></SwiperSlide>
+        <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full Southwestern text-[#fff] font-semibold'><button>Southwestern</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Barbecue text-[#fff] font-semibold'><button>Barbecue</button></SwiperSlide>
+        <SwiperSlide data-history="3" className=' w-[140px] h-[140px]  rounded-full Indian text-[#fff] font-semibold'><button>Indian</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full Chinese text-[#fff] font-semibold'><button>Chinese</button></SwiperSlide>
+        <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Cajun text-[#fff] font-semibold'><button>Cajun & Creole</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Mediterranean text-[#fff] font-semibold'><button>Mediterranean</button></SwiperSlide>
+        <SwiperSlide data-history="7" className=' w-[140px] h-[140px]  rounded-full Greek text-[#fff] font-semibold'><button>Greek</button></SwiperSlide>
+        <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full English text-[#fff] font-semibold'><button>English</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Spanish text-[#fff] font-semibold'><button>Spanish</button></SwiperSlide>
+        <SwiperSlide data-history="3" className=' w-[140px] h-[140px]  rounded-full Thai text-[#fff] font-semibold'><button>Thai</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full German text-[#fff] font-semibold '><button>German</button></SwiperSlide>
+        <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Moroccan text-[#fff] font-semibold'><button>Moroccan</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Irish text-[#fff] font-semibold'><button>Irish</button></SwiperSlide>
+        <SwiperSlide data-history="7" className=' w-[140px] h-[140px]  rounded-full Japanese text-[#fff] font-semibold'><button>Japanese</button></SwiperSlide>
+        <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full Cuban text-[#fff] font-semibold'><button>Cuban</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Hawaiian'><button>Hawaiian</button></SwiperSlide>
+        <SwiperSlide data-history="3" className=' w-[140px] h-[140px]  rounded-full Swedish'><button>Swedish</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full Hungarian'><button>Hungarian</button></SwiperSlide>
+        <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Swedish Portuguese'><button>Portuguese</button></SwiperSlide>
+        <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Brazilian'><button>Brazilian</button></SwiperSlide>
+        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='w-3 absolute left-3 z-50'><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></button>
+        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='w-3 absolute right-3 z-50'><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
 </Swiper>
 
 

@@ -55,3 +55,114 @@ body {
     width: calc(100% - 240px);
   }
 }
+
+.american{
+  background: url("./../../image/american.webp");
+  background-size: cover;
+ 
+}
+.Kid-Friendly{
+  background: url("./../../image/kid-friendly.webp");
+  background-size: cover;
+}
+.Italian{
+  background: url("./../../image/italian.webp");
+  background-size: cover;
+}
+.Asian{
+  background: url("./../../image/asian.webp");
+  background-size: cover;
+}
+.Mexican{
+  background: url("./../../image/mexican.webp");
+  background-size: cover;
+}
+.Southern{
+  background: url("./../../image/southern.webp");
+  background-size: cover;
+}
+.French{
+  background: url("./../../image/french.webp");
+  background-size: cover;
+}
+.Southwestern{
+  background: url("./../../image/southwestern.webp");
+  background-size: cover; 
+}
+.Barbecue{
+  background: url("./../../image/barbecue-bbq.webp");
+  background-size: cover;  
+}
+.Chinese{
+  background: url("./../../image/chinese.webp");
+  background-size: cover; 
+}
+.Indian{
+  background: url("./../../image/indian.webp");
+  background-size: cover; 
+}
+.Cajun{
+  background: url("./../../image/cajun.webp");
+  background-size: cover; 
+}
+.Mediterranean{
+  background: url("./../../image/mediterranean.webp");
+  background-size: cover; 
+}
+.Greek{
+  background: url("./../../image/greek.webp");
+  background-size: cover;
+}
+.English{
+  background: url("./../../image/english.webp");
+  background-size: cover; 
+}
+.Spanish{
+  background: url("./../../image/spanish.webp");
+  background-size: cover; 
+}
+.Thai{
+  background: url("./../../image/thai.webp");
+  background-size: cover; 
+}
+.German{
+  background: url("./../../image/german.webp");
+  background-size: cover; 
+}
+.Moroccan{
+  background: url("./../../image/moroccan.webp");
+  background-size: cover; 
+}
+.Irish{
+  background: url("./../../image/irish.webp");
+  background-size: cover;
+}
+.Japanese{
+  background: url("./../../image/japanese.webp");
+  background-size: cover;
+}
+.Cuban{
+  background: url("./../../image/cuban.webp");
+  background-size: cover;
+}
+.Hawaiian{
+  background: url("./../../image/hawaiian.webp");
+  background-size: cover;
+}
+.Swedish{
+  background: url("./../../image/swedish.webp");
+  background-size: cover;
+}
+.Hungarian{
+  background: url("./../../image/hungarian.webp");
+  background-size: cover;
+}
+.Portuguese{
+  background: url("./../../image/swedish.webp");
+  background-size: cover;
+}
+.Brazilian{
+  background: url("./../../image/brazilian.webp");
+  background-size: cover;
+}
+
