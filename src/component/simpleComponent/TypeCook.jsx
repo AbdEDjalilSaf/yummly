@@ -49,46 +49,65 @@ return (
 </div>
 
 
-
 <Swiper
-        spaceBetween={50}
+        slidesPerView={8}
+        spaceBetween={30}
+        centeredSlides={true}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper pl-16 pr-20 flex relative my-3 z-50"
+      >
+
+{/* <Swiper
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper pl-16 pr-20 flex relative my-3 z-50"
+      > */}
+{/* 
+<Swiper
+        spaceBetween={30}
         slidesPerView={0}
-        navigation={false}
+        navigation={true}
         history={{
           key: 'slide',
         }}
         modules={[Navigation, Pagination, History]}
-        className="mySwiper px-16 flex relative my-3"
-      >
-        <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full american text-[#fff] font-semibold'><button>American</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Kid-Friendly text-[#fff] font-semibold'><button>Kid-Friendly</button></SwiperSlide>
-        <SwiperSlide data-history="3" className='w-[140px] h-[140px]  rounded-full Italian text-[#fff] font-semibold'><button>Italian</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full Asian text-[#fff] font-semibold'><button>Asian</button></SwiperSlide>
-        <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Mexican text-[#fff] font-semibold'><button>Mexican</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Southern text-[#fff] font-semibold'><button>Southern & Soul Food</button></SwiperSlide>
-        <SwiperSlide data-history="7" className=' w-[140px] h-[140px]  rounded-full French text-[#fff] font-semibold'><button>French</button></SwiperSlide>
-        <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full Southwestern text-[#fff] font-semibold'><button>Southwestern</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Barbecue text-[#fff] font-semibold'><button>Barbecue</button></SwiperSlide>
-        <SwiperSlide data-history="3" className=' w-[140px] h-[140px]  rounded-full Indian text-[#fff] font-semibold'><button>Indian</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full Chinese text-[#fff] font-semibold'><button>Chinese</button></SwiperSlide>
-        <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Cajun text-[#fff] font-semibold'><button>Cajun & Creole</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Mediterranean text-[#fff] font-semibold'><button>Mediterranean</button></SwiperSlide>
-        <SwiperSlide data-history="7" className=' w-[140px] h-[140px]  rounded-full Greek text-[#fff] font-semibold'><button>Greek</button></SwiperSlide>
-        <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full English text-[#fff] font-semibold'><button>English</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Spanish text-[#fff] font-semibold'><button>Spanish</button></SwiperSlide>
-        <SwiperSlide data-history="3" className=' w-[140px] h-[140px]  rounded-full Thai text-[#fff] font-semibold'><button>Thai</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full German text-[#fff] font-semibold '><button>German</button></SwiperSlide>
-        <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Moroccan text-[#fff] font-semibold'><button>Moroccan</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Irish text-[#fff] font-semibold'><button>Irish</button></SwiperSlide>
-        <SwiperSlide data-history="7" className=' w-[140px] h-[140px]  rounded-full Japanese text-[#fff] font-semibold'><button>Japanese</button></SwiperSlide>
-        <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full Cuban text-[#fff] font-semibold'><button>Cuban</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Hawaiian'><button>Hawaiian</button></SwiperSlide>
-        <SwiperSlide data-history="3" className=' w-[140px] h-[140px]  rounded-full Swedish'><button>Swedish</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full Hungarian'><button>Hungarian</button></SwiperSlide>
-        <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Swedish Portuguese'><button>Portuguese</button></SwiperSlide>
-        <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Brazilian'><button>Brazilian</button></SwiperSlide>
-        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='w-3 absolute left-3 z-50'><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></button>
-        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" className='w-3 absolute right-3 z-50'><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></button>
+        className="mySwiper  pl-16 pr-20 flex relative my-3 z-50"
+      > */}
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full american text-[#fff] font-semibold'><button>American</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Kid-Friendly text-[#fff] font-semibold'><button>Kid-Friendly</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Italian text-[#fff] font-semibold'><button>Italian</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Asian text-[#fff] font-semibold'><button>Asian</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Mexican text-[#fff] font-semibold'><button>Mexican</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Southern text-[#fff] font-semibold px-5'><button>Southern & Soul Food</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full French text-[#fff] font-semibold'><button>French</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Southwestern text-[#fff] font-semibold'><button>Southwestern</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Barbecue text-[#fff] font-semibold'><button>Barbecue</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Indian text-[#fff] font-semibold'><button>Indian</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Chinese text-[#fff] font-semibold'><button>Chinese</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Cajun text-[#fff] font-semibold'><button>Cajun & Creole</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Mediterranean text-[#fff] font-semibold'><button>Mediterranean</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Greek text-[#fff] font-semibold'><button>Greek</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full English text-[#fff] font-semibold'><button>English</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Spanish text-[#fff] font-semibold'><button>Spanish</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Thai text-[#fff] font-semibold'><button>Thai</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full German text-[#fff] font-semibold '><button>German</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Moroccan text-[#fff] font-semibold'><button>Moroccan</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Irish text-[#fff] font-semibold'><button>Irish</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Japanese text-[#fff] font-semibold'><button>Japanese</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Cuban text-[#fff] font-semibold'><button>Cuban</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Hawaiian text-[#fff] font-semibold'><button>Hawaiian</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Swedish text-[#fff] font-semibold'><button>Swedish</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Hungarian text-[#fff] font-semibold'><button>Hungarian</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Swedish Portuguese text-[#fff] font-semibold'><button>Portuguese</button></SwiperSlide>
+        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Brazilian text-[#fff] font-semibold'><button>Brazilian</button></SwiperSlide>
+        <span className='bg-[#f6f6f6] w-7 h-full absolute left-0 '></span>
+        <span></span>
 </Swiper>
 
 
@@ -98,7 +117,7 @@ return (
 
 </div>
 
-   </div> 
+  </div> 
 
 
 
@@ -106,7 +125,7 @@ return (
 
 
 
-  </>
+</>
   );
 }
 
@@ -122,14 +141,32 @@ return (
       //   }}
       //   modules={[Navigation, Pagination, History]}
       //   className="mySwiper"
-      // >
-      //   <SwiperSlide data-history="1">Slide 1</SwiperSlide>
-      //   <SwiperSlide data-history="Slide 2">Slide 2</SwiperSlide>
-      //   <SwiperSlide data-history="3">Slide 3</SwiperSlide>
-      //   <SwiperSlide data-history="Slide 4">Slide 4</SwiperSlide>
-      //   <SwiperSlide data-history="5">Slide 5</SwiperSlide>
-      //   <SwiperSlide data-history="Slide 6">Slide 6</SwiperSlide>
-      //   <SwiperSlide data-history="7">Slide 7</SwiperSlide>
-      //   <SwiperSlide data-history="Slide 8">Slide 8</SwiperSlide>
-      //   <SwiperSlide data-history="9">Slide 9</SwiperSlide>
-      // </Swiper>
+      // // >
+      // <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full american text-[#fff] font-semibold'><button>American</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Kid-Friendly text-[#fff] font-semibold'><button>Kid-Friendly</button></SwiperSlide>
+      // <SwiperSlide data-history="3" className='w-[140px] h-[140px]  rounded-full Italian text-[#fff] font-semibold'><button>Italian</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full Asian text-[#fff] font-semibold'><button>Asian</button></SwiperSlide>
+      // <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Mexican text-[#fff] font-semibold'><button>Mexican</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Southern text-[#fff] font-semibold px-5'><button>Southern & Soul Food</button></SwiperSlide>
+      // <SwiperSlide data-history="7" className=' w-[140px] h-[140px]  rounded-full French text-[#fff] font-semibold'><button>French</button></SwiperSlide>
+      // <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full Southwestern text-[#fff] font-semibold'><button>Southwestern</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Barbecue text-[#fff] font-semibold'><button>Barbecue</button></SwiperSlide>
+      // <SwiperSlide data-history="3" className=' w-[140px] h-[140px]  rounded-full Indian text-[#fff] font-semibold'><button>Indian</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full Chinese text-[#fff] font-semibold'><button>Chinese</button></SwiperSlide>
+      // <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Cajun text-[#fff] font-semibold'><button>Cajun & Creole</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Mediterranean text-[#fff] font-semibold'><button>Mediterranean</button></SwiperSlide>
+      // <SwiperSlide data-history="7" className=' w-[140px] h-[140px]  rounded-full Greek text-[#fff] font-semibold'><button>Greek</button></SwiperSlide>
+      // <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full English text-[#fff] font-semibold'><button>English</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Spanish text-[#fff] font-semibold'><button>Spanish</button></SwiperSlide>
+      // <SwiperSlide data-history="3" className=' w-[140px] h-[140px]  rounded-full Thai text-[#fff] font-semibold'><button>Thai</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full German text-[#fff] font-semibold '><button>German</button></SwiperSlide>
+      // <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Moroccan text-[#fff] font-semibold'><button>Moroccan</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Irish text-[#fff] font-semibold'><button>Irish</button></SwiperSlide>
+      // <SwiperSlide data-history="7" className=' w-[140px] h-[140px]  rounded-full Japanese text-[#fff] font-semibold'><button>Japanese</button></SwiperSlide>
+      // <SwiperSlide data-history="1" className=' w-[140px] h-[140px]  rounded-full Cuban text-[#fff] font-semibold'><button>Cuban</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 2" className=' w-[140px] h-[140px]  rounded-full Hawaiian text-[#fff] font-semibold'><button>Hawaiian</button></SwiperSlide>
+      // <SwiperSlide data-history="3" className=' w-[140px] h-[140px]  rounded-full Swedish text-[#fff] font-semibold'><button>Swedish</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 4" className=' w-[140px] h-[140px]  rounded-full Hungarian text-[#fff] font-semibold'><button>Hungarian</button></SwiperSlide>
+      // <SwiperSlide data-history="5" className=' w-[140px] h-[140px]  rounded-full Swedish Portuguese text-[#fff] font-semibold'><button>Portuguese</button></SwiperSlide>
+      // <SwiperSlide data-history="Slide 6" className=' w-[140px] h-[140px]  rounded-full Brazilian text-[#fff] font-semibold'><button>Brazilian</button></SwiperSlide>
+      // // </Swiper>
