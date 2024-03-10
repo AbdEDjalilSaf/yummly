@@ -11,15 +11,20 @@ import 'swiper/css/pagination';
 
 import './TypeCook.css';
 // import required modules
-import { Navigation, Pagination, History } from 'swiper/modules';
+import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 export default function TypeCook() {
 
+const [statColor,setStatColor] = useState("")
 const buttons = ['Button 1', 'Button 2', 'Button 3', 'Button 4'];
 const SearchRecips = useRef();
 
 const refFocus = ()=>{
   SearchRecips.current.focus(); 
+}
+
+const bgColorfunc = ()=>{
+  setStatColor(!statColor);
 }
 
 return (
@@ -50,62 +55,41 @@ return (
 
 
 <Swiper
-        slidesPerView={8}
-        spaceBetween={30}
-        centeredSlides={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper pl-16 pr-20 flex relative my-3 z-50"
-      >
-
-{/* <Swiper
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper pl-16 pr-20 flex relative my-3 z-50"
-      > */}
-{/* 
-<Swiper
-        spaceBetween={30}
         slidesPerView={0}
+        cssMode={true}
         navigation={true}
-        history={{
-          key: 'slide',
-        }}
-        modules={[Navigation, Pagination, History]}
+        mousewheel={true}
+        keyboard={true}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper  pl-16 pr-20 flex relative my-3 z-50"
-      > */}
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full american text-[#fff] font-semibold'><button>American</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Kid-Friendly text-[#fff] font-semibold'><button>Kid-Friendly</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Italian text-[#fff] font-semibold'><button>Italian</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Asian text-[#fff] font-semibold'><button>Asian</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Mexican text-[#fff] font-semibold'><button>Mexican</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Southern text-[#fff] font-semibold px-5'><button>Southern & Soul Food</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full French text-[#fff] font-semibold'><button>French</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Southwestern text-[#fff] font-semibold'><button>Southwestern</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Barbecue text-[#fff] font-semibold'><button>Barbecue</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Indian text-[#fff] font-semibold'><button>Indian</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Chinese text-[#fff] font-semibold'><button>Chinese</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Cajun text-[#fff] font-semibold'><button>Cajun & Creole</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Mediterranean text-[#fff] font-semibold'><button>Mediterranean</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Greek text-[#fff] font-semibold'><button>Greek</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full English text-[#fff] font-semibold'><button>English</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Spanish text-[#fff] font-semibold'><button>Spanish</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Thai text-[#fff] font-semibold'><button>Thai</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full German text-[#fff] font-semibold '><button>German</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Moroccan text-[#fff] font-semibold'><button>Moroccan</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Irish text-[#fff] font-semibold'><button>Irish</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Japanese text-[#fff] font-semibold'><button>Japanese</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Cuban text-[#fff] font-semibold'><button>Cuban</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Hawaiian text-[#fff] font-semibold'><button>Hawaiian</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Swedish text-[#fff] font-semibold'><button>Swedish</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Hungarian text-[#fff] font-semibold'><button>Hungarian</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Swedish Portuguese text-[#fff] font-semibold'><button>Portuguese</button></SwiperSlide>
-        <SwiperSlide  className=' w-[140px] h-[140px]  rounded-full Brazilian text-[#fff] font-semibold'><button>Brazilian</button></SwiperSlide>
+>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "american"}  font-semibold`} onClick={()=> bgColorfunc()}><button>American</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Kid-Friendly"} font-semibold`} onClick={()=> bgColorfunc()}><button>Kid-Friendly</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Italian"} font-semibold`} onClick={()=> bgColorfunc()}><button>Italian</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Asian"} font-semibold`} onClick={()=> bgColorfunc()}><button>Asian</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Mexican"} font-semibold`} onClick={()=> bgColorfunc()}><button>Mexican</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Southern"} font-semibold px-5 `} onClick={()=> bgColorfunc()}><button>Southern & Soul Food</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "French"} font-semibold`} onClick={()=> bgColorfunc()}><button>French</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Southwestern"} font-semibold`} onClick={()=> bgColorfunc()}><button>Southwestern</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Barbecue"} font-semibold`} onClick={()=> bgColorfunc()}><button>Barbecue</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Indian"} font-semibold`} onClick={()=> bgColorfunc()}><button>Indian</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Chinese"} font-semibold`} onClick={()=> bgColorfunc()}><button>Chinese</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Cajun"} font-semibold`} onClick={()=> bgColorfunc()}><button>Cajun & Creole</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Mediterranean"} font-semibold`} onClick={()=> bgColorfunc()}><button>Mediterranean</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Greek"} font-semibold`} onClick={()=> bgColorfunc()}><button>Greek</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "English"} font-semibold`} onClick={()=> bgColorfunc()}><button>English</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Spanish"} font-semibold`} onClick={()=> bgColorfunc()}><button>Spanish</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Thai"} font-semibold`} onClick={()=> bgColorfunc()}><button>Thai</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "German"} font-semibold `} onClick={()=> bgColorfunc()}><button>German</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Moroccan"} font-semibold`} onClick={()=> bgColorfunc()}><button>Moroccan</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Irish"} font-semibold`} onClick={()=> bgColorfunc()}><button>Irish</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Japanese"} font-semibold`} onClick={()=> bgColorfunc()}><button>Japanese</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Cuban"} font-semibold`} onClick={()=> bgColorfunc()}><button>Cuban</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Hawaiian"} font-semibold`} onClick={()=> bgColorfunc()}><button>Hawaiian</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Swedish"} font-semibold`} onClick={()=> bgColorfunc()}><button>Swedish</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Hungarian"} font-semibold`} onClick={()=> bgColorfunc()} ><button>Hungarian</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer  rounded-full   text-[#fff] ${statColor ? "bg-[#3a9691]" : "Portuguese"} font-semibold`} onClick={()=> bgColorfunc()}><button>Portuguese</button></SwiperSlide>
+        <SwiperSlide  className={` w-[140px] h-[140px] mx-5 cursor-pointer rounded-full  text-[#fff] ${statColor ? "bg-[#3a9691]" : "Brazilian"} font-semibold`} onClick={()=> bgColorfunc()}><button>Brazilian</button></SwiperSlide>
         <span className='bg-[#f6f6f6] w-7 h-full absolute left-0 '></span>
         <span></span>
 </Swiper>
